@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    
+nav {
+  background-color: #0d0d0d;
+  color: white;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  font-family: "Ubunt mono", monospace;
+}
+    
+nav .name {
+  display: flex;
+  padding-left: 4vh;
+  font-size: 16px;
+}
+    
+nav .name div:nth-child(1) {
+  padding: 2px;
+}
+    
+nav .name div:nth-child(1) a {
+  color: white;
+  text-decoration: none;
+}
+    
+nav .name div:nth-child(2) {
+  background-color: white;
+  height: auto;
+  width: 10px;
+}
+    
+nav ul {
+  display: flex;
+  margin-left: auto;
+  margin-right: 4vh;
+  font-size: 14px;
+}
+    
+nav ul li {
+  list-style: none;
+}
+    
+nav ul li a {
+  text-decoration: none;
+}
