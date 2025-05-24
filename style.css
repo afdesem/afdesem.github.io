@@ -133,11 +133,6 @@ footer span {
   padding: 4px;
 }
 
-footer .copyright {
-  padding: 0;
-  font-size: 3px;
-}
-
 @media (max-width: 1250px) {
   .body {
     padding: 0;
