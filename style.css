@@ -1,12 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-    
-nav {
+
+body {
   background-color: #0d0d0d;
+  color: white;
+  font-family: "Ubunt mono", monospace;
+}
+
+.bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: invert(100%);
+  opacity: 8%;
+}
+
+nav {
+  position: absolute;
   color: white;
   height: 64px;
   display: flex;
   align-items: center;
-  font-family: "Ubunt mono", monospace;
+  width: 100%;
+  z-index: 10;
 }
     
 nav .name {
@@ -28,6 +47,13 @@ nav .name div:nth-child(2) {
   background-color: white;
   height: auto;
   width: 10px;
+  animation: cursor 1s steps(1) infinite;
+}
+
+@keyframes cursor {
+  0% {opacity: 0;}
+  50% {opacity: 1;}
+  0% {opacity: 0;}
 }
     
 nav ul {
@@ -43,4 +69,81 @@ nav ul li {
     
 nav ul li a {
   text-decoration: none;
+}
+
+main {
+  padding: 0 4vh 0 4vh;
+}
+
+.body {
+  padding: 0 15vh 0 15vh;
+}
+
+.hero {
+  color: white;
+  width: auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  margin: 0 4vh 0 4vh;
+}
+
+.hero .header div {
+  margin: 2vh 0 2vh;
+}
+
+.hero .header div:nth-child(1) {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.hero .code {
+  margin-left: auto;
+}
+
+p:nth-child(1) {
+  margin: 0;
+}
+
+p {
+  margin: 8vh 0;
+}
+
+.popup {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.4s ease .1s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 32vh;
+  align-items: center;
+  justify-content: center;
+}
+
+footer span {
+  padding: 4px;
+}
+
+footer .copyright {
+  padding: 0;
+  font-size: 3px;
+}
+
+@media (max-width: 1250px) {
+  .body {
+    padding: 0;
+  }
+  
+  .hero .code {
+    display: none;
+  }
 }
